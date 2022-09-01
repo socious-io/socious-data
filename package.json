@@ -1,5 +1,5 @@
 {
-  "name": "socious-data",
+  "name": "@socious/data",
   "version": "1.0.0",
   "description": "types and translations",
   "type": "module",
@@ -13,5 +13,14 @@
   "dependencies": {
     "joi": "^17.6.0",
     "prettier": "^2.7.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socious-io/socious-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/socious-io/socious-data/issues"
+  },
+  "homepage": "https://github.com/socious-io/socious-data#readme"
 }
