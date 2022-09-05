@@ -53,7 +53,7 @@ export const SocialCauses = {
   ANTI_SEMITISM: 'ANTI-SEMITISM',
 };
 
-export const ApplicantStatusTypes = {
+export const ApplicantStatus = {
   PENDING: 'PENDING',
   OFFERED: 'OFFERED',
   REJECTED: 'REJECTED',
@@ -68,7 +68,7 @@ export const UserStatusType = {
   SUSPEND: 'SUSPEND',
 };
 
-export const ProjectLengthTypes = {
+export const ProjectLengthType = {
   LESS_THAN_A_DAY: 'LESS_THAN_A_DAY',
   LESS_THAN_A_MONTH: 'LESS_THAN_A_MONTH',
   ONE_THREE_MONTHS: '1_3_MONTHS',
@@ -76,30 +76,30 @@ export const ProjectLengthTypes = {
   SIX_MONTHS_OR_MORE: '6_MONTHS_OR_MORE',
 };
 
-export const ProjectTypes = {
+export const ProjectType = {
   ONE_OFF: 'ONE_OFF',
   PART_TIME: 'PART_TIME',
   FULL_TIME: 'FULL_TIME',
 };
 
-export const ProjectRemotePreferenceTypes = {
+export const ProjectRemotePreferenceType = {
   ONSITE: 'ONSITE',
   REMOOTE: 'REMOOTE',
   HYBRID: 'HYBRID',
 };
 
-export const ProjectStatusTypes = {
+export const ProjectStatusType = {
   DRAFT: 'DRAFT',
   EXPIRE: 'EXPIRE',
   ACTIVE: 'ACTIVE',
 };
 
-export const ProjectPaymentTypes = {
+export const ProjectPaymentType = {
   VOLUNTEER: 'VOLUNTEER',
   PAID: 'PAID',
 };
 
-export const ProjectPaymentSchemeTypes = {
+export const ProjectPaymentSchemeType = {
   HOURL: 'HOURLY',
   FIXED: 'FIXED',
 };
@@ -115,7 +115,7 @@ export const OrganizationType = {
   OTHER: 'OTHER',
 };
 
-export const NotificationTypes = {
+export const NotificationType = {
   FOLLOWED: 'FOLLOWED',
   COMMENT_LIKE: 'COMMENT_LIKE',
   POST_LIKE: 'POST_LIKE',
