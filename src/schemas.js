@@ -31,11 +31,11 @@ export const ProjectUpsertSchema = Joi.object({
   payment_range_higher: Joi.string().allow(null),
   experience_level: Joi.number(),
   status: Joi.string().valid(...Object.values(enums.ProjectStatusType)),
-  project_type: Joi.string().valid(...Object.values(ProjectTypes)),
-  project_length: Joi.string().valid(...Object.values(ProjectLengthTypes)),
+  project_type: Joi.string().valid(...Object.values(enums.ProjectType)),
+  project_length: Joi.string().valid(...Object.values(enums.ProjectLengthType)),
   skills: Joi.array().items(Joi.string()),
   causes_tags: Joi.array().items(
-    Joi.string().valid(...Object.values(SocialCauses)),
+    Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
   country: Joi.string().min(2).max(3)
 });
