@@ -1,8 +1,10 @@
-import * as schema from './schemas';
+import * as validators from './validators';
 import * as enums from './enums';
 
+export const Validate = validators
+
 export default {
-  ...schema,
+  ...validators,
   ...enums,
   text: {
     en: Object,

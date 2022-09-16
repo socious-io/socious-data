@@ -1,10 +1,12 @@
 import * as enums from './enums.js';
-import * as schemas from './schemas.js';
+import * as validators from './validators.js';
 import * as text_en from './translations/en.json' assert {type: 'json'};
+
+export const Validate = validators
 
 export default {
   ...enums,
-  ...schemas,
+  ...validators,
   text: {
     en: text_en,
   },
