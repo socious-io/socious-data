@@ -1,7 +1,7 @@
 import Joi from 'joi';
 import * as enums from './enums.js';
 
-export const PostUpsertSchema = Joi.object({
+export const PostSchema = Joi.object({
   content: Joi.string().required(),
   causes_tags: Joi.array()
     .items(Joi.string().valid(...Object.values(enums.SocialCauses)))
@@ -11,16 +11,22 @@ export const PostUpsertSchema = Joi.object({
   media: Joi.array().max(10).items(Joi.string().uuid()),
 });
 
-export const CommentUpsertSchema = Joi.object({
+export const CommentSchema = Joi.object({
   content: Joi.string().required(),
   reply_id: Joi.string().uuid(),
 });
 
+export const AnswerSchema = Joi.object({
+  id: Joi.string().uuid().required(),
+  answer: Joi.string(),
+  selected_option: Joi.number().min(1).max(5),
+});
 
-export const ApplicantUpsertSchema = Joi.object({
+export const ApplicantSchema = Joi.object({
   cover_letter: Joi.string().required(),
   payment_type: Joi.number(),
   payment_rate: Joi.number(),
+  answers: Joi.array().items(AnswerSchema),
 });
 
 export const ApplicantOfferSchema = Joi.object({
@@ -30,11 +36,13 @@ export const ApplicantOfferSchema = Joi.object({
   assignment_total: Joi.number(),
 });
 
+
 export const ApplicantRejectSchema = Joi.object({
   feedback: Joi.string(),
 });
 
-export const ChatNewSchema = Joi.object({
+
+export const ChatSchema = Joi.object({
   name: Joi.string().required(),
   description: Joi.string(),
   type: Joi.string().valid(...Object.values(enums.ChatType)),
@@ -52,7 +60,7 @@ export const ChatUpdateSchema = Joi.object({
   type: Joi.string().valid(...Object.values(enums.ChatType)),
 });
 
-export const MessageUpsertSchema = Joi.object({
+export const MessageSchema = Joi.object({
   text: Joi.string().required(),
   media: Joi.string().uuid(),
 });
@@ -66,7 +74,7 @@ export const DeviceNewSchema = Joi.object({
   }).required(),
 });
 
-export const OrganizationUpsertSchema = Joi.object({
+export const OrganizationSchema = Joi.object({
   name: Joi.string().required(),
   bio: Joi.string(),
   description: Joi.string(),
@@ -110,7 +118,7 @@ export const UpdateProfileSchema = Joi.object({
 });
 
 
-export const ProjectUpsertSchema = Joi.object({
+export const ProjectSchema = Joi.object({
   title: Joi.string().required(),
   description: Joi.string().required(),
   remote_preference: Joi.string()
