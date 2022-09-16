@@ -8,9 +8,7 @@ export const PostUpsertSchema = Joi.object({
     .required(),
   hashtags: Joi.array().items(Joi.string()),
   identity_tags: Joi.array().items(Joi.string()),
-  media: Joi.array()
-    .max(10)
-    .items(Joi.string().uuid()),
+  media: Joi.array().max(10).items(Joi.string().uuid()),
 });
 
 export const CommentUpsertSchema = Joi.object({
@@ -39,9 +37,7 @@ export const ProjectUpsertSchema = Joi.object({
   causes_tags: Joi.array().items(
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
-  country: Joi.string()
-    .min(2)
-    .max(3),
+  country: Joi.string().min(2).max(3),
 });
 
 export const ApplicantUpsertSchema = Joi.object({
@@ -97,16 +93,12 @@ export const OrganizationUpsertSchema = Joi.object({
   name: Joi.string().required(),
   bio: Joi.string(),
   description: Joi.string(),
-  email: Joi.string()
-    .email()
-    .required(),
+  email: Joi.string().email().required(),
   phone: Joi.string(),
   type: Joi.string().valid(...Object.values(enums.OrganizationType)),
   city: Joi.string(),
   address: Joi.string(),
-  country: Joi.string()
-    .min(2)
-    .max(3),
+  country: Joi.string().min(2).max(3),
   social_causes: Joi.array().items(
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
@@ -114,24 +106,21 @@ export const OrganizationUpsertSchema = Joi.object({
   mobile_country_code: Joi.string().regex(/^\+[0-9 -]+/),
 });
 
-export const usernamePattern = /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
+export const usernamePattern =
+  /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
 
 export const languagePattern = /^[a-z][a-z](-[a-z][a-z])?$/;
 
 export const UpdateProfileSchema = Joi.object({
   first_name: Joi.string().required(),
   last_name: Joi.string().required(),
-  username: Joi.string()
-    .regex(usernamePattern)
-    .required(),
+  username: Joi.string().regex(usernamePattern).required(),
   bio: Joi.string(),
   mission: Joi.string(),
   language: Joi.string().regex(languagePattern),
   city: Joi.string(),
   address: Joi.string(),
-  country: Joi.string()
-    .min(2)
-    .max(3),
+  country: Joi.string().min(2).max(3),
   phone: Joi.string(),
   wallet_address: Joi.string(),
   avatar: Joi.string().uuid(),
