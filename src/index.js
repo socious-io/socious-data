@@ -2,7 +2,7 @@ import * as enums from './enums.js';
 import * as validators from './validators.js';
 import * as text_en from './translations/en.json' assert {type: 'json'};
 
-export const Validate = validators
+export const validate = validators
 
 export default {
   ...enums,

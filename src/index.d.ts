@@ -1,7 +1,7 @@
 import * as validators from './validators';
 import * as enums from './enums';
 
-export const Validate = validators
+export const validate = validators
 
 export default {
   ...validators,
