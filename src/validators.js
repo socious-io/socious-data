@@ -16,29 +16,6 @@ export const CommentUpsertSchema = Joi.object({
   reply_id: Joi.string().uuid(),
 });
 
-export const ProjectUpsertSchema = Joi.object({
-  title: Joi.string().required(),
-  description: Joi.string().required(),
-  remote_preference: Joi.string()
-    .valid(...Object.values(enums.ProjectRemotePreferenceType))
-    .required(),
-  payment_type: Joi.string().valid(...Object.values(enums.ProjectPaymentType)),
-  payment_scheme: Joi.string().valid(
-    ...Object.values(enums.ProjectPaymentSchemeType),
-  ),
-  payment_currency: Joi.string().allow(null),
-  payment_range_lower: Joi.string().allow(null),
-  payment_range_higher: Joi.string().allow(null),
-  experience_level: Joi.number(),
-  status: Joi.string().valid(...Object.values(enums.ProjectStatusType)),
-  project_type: Joi.string().valid(...Object.values(enums.ProjectType)),
-  project_length: Joi.string().valid(...Object.values(enums.ProjectLengthType)),
-  skills: Joi.array().items(Joi.string()),
-  causes_tags: Joi.array().items(
-    Joi.string().valid(...Object.values(enums.SocialCauses)),
-  ),
-  country: Joi.string().min(2).max(3),
-});
 
 export const ApplicantUpsertSchema = Joi.object({
   cover_letter: Joi.string().required(),
@@ -130,4 +107,33 @@ export const UpdateProfileSchema = Joi.object({
   ),
   skills: Joi.array().items(Joi.string()),
   mobile_country_code: Joi.string().regex(/^\+[0-9 -]+/),
+});
+
+
+export const ProjectUpsertSchema = Joi.object({
+  title: Joi.string().required(),
+  description: Joi.string().required(),
+  remote_preference: Joi.string()
+    .valid(...Object.values(RemotePreferenceTypes))
+    .required(),
+  payment_type: Joi.string().valid(...Object.values(PaymentTypes)),
+  payment_scheme: Joi.string().valid(...Object.values(PaymentSchemeTypes)),
+  payment_currency: Joi.string().allow(null),
+  payment_range_lower: Joi.string().allow(null),
+  payment_range_higher: Joi.string().allow(null),
+  experience_level: Joi.number(),
+  status: Joi.string().valid(...Object.values(StatusTypes)),
+  project_type: Joi.string().valid(...Object.values(ProjectTypes)),
+  project_length: Joi.string().valid(...Object.values(ProjectLengthTypes)),
+  skills: Joi.array().items(Joi.string()),
+  causes_tags: Joi.array().items(
+    Joi.string().valid(...Object.values(SocialCauses)),
+  ),
+  country: Joi.string().min(2).max(3),
+});
+
+export const QuestionSchema = Joi.object({
+  question: Joi.string().required(),
+  required: Joi.boolean(),
+  options: Joi.array().min(2).max(5).items(Joi.string()),
 });
