@@ -50,14 +50,14 @@ export const ApplicantUpsertSchema = Joi.object({
   payment_rate: Joi.number(),
 });
 
-export const ApplicantofferSchema = Joi.object({
+export const ApplicantOfferSchema = Joi.object({
   offer_rate: Joi.string().required(),
   offer_message: Joi.string().required(),
   due_date: Joi.string().isoDate(),
   assignment_total: Joi.number(),
 });
 
-export const ApplicantrejectSchema = Joi.object({
+export const ApplicantRejectSchema = Joi.object({
   feedback: Joi.string(),
 });
 

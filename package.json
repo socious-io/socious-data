@@ -4,9 +4,10 @@
   "description": "types and translations",
   "type": "module",
   "main": "./src/index.js",
+  "types": "./src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier:fix": "prettier --write ./src/**/*.js ./src/**/*.ts"
+    "prettier:fix": "prettier --write ."
   },
   "author": "",
   "license": "ISC",
