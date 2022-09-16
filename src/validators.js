@@ -137,3 +137,8 @@ export const QuestionSchema = Joi.object({
   required: Joi.boolean(),
   options: Joi.array().min(2).max(5).items(Joi.string()),
 });
+
+
+export const UUID = Joi.string().uuid()
+
+export const UUIDs = Joi.array().items(Joi.string().uuid())
