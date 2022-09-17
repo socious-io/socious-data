@@ -131,20 +131,20 @@ export const ProjectSchema = Joi.object({
   title: Joi.string().required(),
   description: Joi.string().required(),
   remote_preference: Joi.string()
-    .valid(...Object.values(RemotePreferenceTypes))
+    .valid(...Object.values(enums.ProjectRemotePreferenceType))
     .required(),
-  payment_type: Joi.string().valid(...Object.values(PaymentTypes)),
-  payment_scheme: Joi.string().valid(...Object.values(PaymentSchemeTypes)),
+  payment_type: Joi.string().valid(...Object.values(enums.ProjectPaymentType)),
+  payment_scheme: Joi.string().valid(...Object.values(enums.ProjectPaymentSchemeType)),
   payment_currency: Joi.string().allow(null),
   payment_range_lower: Joi.string().allow(null),
   payment_range_higher: Joi.string().allow(null),
   experience_level: Joi.number(),
-  status: Joi.string().valid(...Object.values(StatusTypes)),
-  project_type: Joi.string().valid(...Object.values(ProjectTypes)),
-  project_length: Joi.string().valid(...Object.values(ProjectLengthTypes)),
+  status: Joi.string().valid(...Object.values(enums.ProjectStatusType)),
+  project_type: Joi.string().valid(...Object.values(enums.ProjectType)),
+  project_length: Joi.string().valid(...Object.values(enums.ProjectLengthType)),
   skills: Joi.array().items(Joi.string()),
   causes_tags: Joi.array().items(
-    Joi.string().valid(...Object.values(SocialCauses)),
+    Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
   country: Joi.string().min(2).max(3),
 });

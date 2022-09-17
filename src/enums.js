@@ -84,7 +84,7 @@ export const ProjectType = {
 
 export const ProjectRemotePreferenceType = {
   ONSITE: 'ONSITE',
-  REMOOTE: 'REMOOTE',
+  REMOTE: 'REMOTE',
   HYBRID: 'HYBRID',
 };
 
