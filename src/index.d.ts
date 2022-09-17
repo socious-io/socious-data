@@ -5,8 +5,5 @@ export const validate = validators
 
 export default {
   ...validators,
-  ...enums,
-  text: {
-    en: Object,
-  },
+  ...enums
 };
