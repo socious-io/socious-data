@@ -1,21 +1,23 @@
 {
   "name": "@socious/data",
   "version": "1.0.0",
-  "description": "types and translations",
+  "description": "Data definitions for Socious API",
   "type": "module",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier:fix": "prettier --write ."
+    "prettier:fix": "prettier --write ./src/**/*.js ./src/**/*.ts"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Socious <info@socious.io>",
+  "license": "MIT",
   "dependencies": {
-    "joi": "^17.6.0",
+    "joi": "^17.6.0"
+  },
+  "devDependencies": {
+    "joi-to-typescript": "^4.0.5",
     "prettier": "^2.7.1"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/socious-io/socious-data.git"
