@@ -65,6 +65,15 @@ export const MessageSchema = Joi.object({
   media: Joi.string().uuid(),
 });
 
+export const FindChatSchema = Joi.object({
+  participants: Joi.array()
+    .unique()
+    .min(1)
+    .max(250)
+    .items(Joi.string().uuid())
+    .required(),
+});
+
 export const DeviceNewSchema = Joi.object({
   token: Joi.string().required(),
   meta: Joi.object({
