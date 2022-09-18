@@ -87,7 +87,7 @@ export const OrganizationSchema = Joi.object({
   name: Joi.string().required(),
   bio: Joi.string(),
   description: Joi.string(),
-  email: Joi.string().email({allow: !isBrowser}).required(),
+  email: Joi.string().email({tlds: {allow: !isBrowser}}).required(),
   phone: Joi.string(),
   type: Joi.string().valid(...Object.values(enums.OrganizationType)),
   city: Joi.string(),
