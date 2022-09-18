@@ -126,6 +126,19 @@ export const NotificationType = {
   APPLICATION: 'APPLICATION',
 };
 
+
+export const NotificationTitle = {
+  FOLLOWED: 'Followed',
+  COMMENT_LIKE: 'Comment liked',
+  POST_LIKE: 'Post liked',
+  CHAT: 'New Message',
+  SHARE_POST: 'Post shared',
+  SHARE_PROJECT: 'Project shared',
+  COMMENT: 'New commented',
+  APPLICATION: 'Project applied',
+};
+
+
 export const IdentityType = {
   ORG: 'organizations',
   USER: 'users',
