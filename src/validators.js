@@ -1,6 +1,8 @@
 import Joi from 'joi';
 import * as enums from './enums.js';
 
+const isBrowser = typeof window !== 'undefined';
+
 export const PostSchema = Joi.object({
   content: Joi.string().required(),
   causes_tags: Joi.array()
@@ -36,11 +38,9 @@ export const ApplicantOfferSchema = Joi.object({
   assignment_total: Joi.number(),
 });
 
-
 export const ApplicantRejectSchema = Joi.object({
   feedback: Joi.string(),
 });
-
 
 export const ChatSchema = Joi.object({
   name: Joi.string().required(),
@@ -87,7 +87,7 @@ export const OrganizationSchema = Joi.object({
   name: Joi.string().required(),
   bio: Joi.string(),
   description: Joi.string(),
-  email: Joi.string().email().required(),
+  email: Joi.string().email({allow: !isBrowser}).required(),
   phone: Joi.string(),
   type: Joi.string().valid(...Object.values(enums.OrganizationType)),
   city: Joi.string(),
@@ -126,7 +126,6 @@ export const UpdateProfileSchema = Joi.object({
   mobile_country_code: Joi.string().regex(/^\+[0-9 -]+/),
 });
 
-
 export const ProjectSchema = Joi.object({
   title: Joi.string().required(),
   description: Joi.string().required(),
@@ -134,7 +133,9 @@ export const ProjectSchema = Joi.object({
     .valid(...Object.values(enums.ProjectRemotePreferenceType))
     .required(),
   payment_type: Joi.string().valid(...Object.values(enums.ProjectPaymentType)),
-  payment_scheme: Joi.string().valid(...Object.values(enums.ProjectPaymentSchemeType)),
+  payment_scheme: Joi.string().valid(
+    ...Object.values(enums.ProjectPaymentSchemeType),
+  ),
   payment_currency: Joi.string().allow(null),
   payment_range_lower: Joi.string().allow(null),
   payment_range_higher: Joi.string().allow(null),
@@ -163,7 +164,6 @@ export const SearchSchema = Joi.object({
   current_user_id: Joi.string().uuid().required(),
 });
 
+export const UUID = Joi.string().uuid();
 
-export const UUID = Joi.string().uuid()
-
-export const UUIDs = Joi.array().items(Joi.string().uuid())
+export const UUIDs = Joi.array().items(Joi.string().uuid());
