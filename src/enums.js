@@ -164,7 +164,7 @@ export const SearchType = {
   ORGANIZATIONS: 'organizations'
 }
 
-export const MediaContentTypes = {
+export const MediaContentType = {
   JPEG: 'image/jpeg',
   PNG: 'image/png',
   PDF: 'application/pdf',
