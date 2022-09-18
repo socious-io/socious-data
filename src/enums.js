@@ -163,3 +163,9 @@ export const SearchType = {
   CHATS: 'chats',
   ORGANIZATIONS: 'organizations'
 }
+
+export const MediaContentTypes = {
+  JPEG: 'image/jpeg',
+  PNG: 'image/png',
+  PDF: 'application/pdf',
+};
