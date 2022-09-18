@@ -154,3 +154,12 @@ export const ChatMemberType = {
   MEMBER: 'MEMBER',
   ADMIN: 'ADMIN',
 };
+
+export const SearchType = {
+  POSTS: 'posts',
+  USERS: 'users',
+  RELATED_USERS: 'related_users',
+  PROJECTS: 'projects',
+  CHATS: 'chats',
+  ORGANIZATIONS: 'organizations'
+}
