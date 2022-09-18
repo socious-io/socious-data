@@ -155,6 +155,14 @@ export const QuestionSchema = Joi.object({
   options: Joi.array().min(2).max(5).items(Joi.string()),
 });
 
+export const SearchSchema = Joi.object({
+  q: Joi.string().required(),
+  type: Joi.string()
+    .valid(...Object.values(enums.SearchType))
+    .required(),
+  current_user_id: Joi.string().uuid().required(),
+});
+
 
 export const UUID = Joi.string().uuid()
 
