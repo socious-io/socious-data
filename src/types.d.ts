@@ -52,6 +52,8 @@ declare type TSocialCauses =
   | 'ISLAMOPHOBIA'
   | 'ANTI_SEMITISM';
 
+export declare const SocialCauses: {[index: TSocialCauses]: TSocialCauses};
+
 declare type TApplicantStatus =
   | 'PENDING'
   | 'OFFERED'
@@ -104,3 +106,9 @@ declare type TIdentity = 'organizations' | 'users';
 declare type TChat = 'CHAT' | 'GROUPED' | 'CHANNEL';
 
 declare type TChatMember = 'MEMBER' | 'ADMIN';
+
+declare type TLanguage = 'en' | 'ja';
+
+export declare const Text: {
+  [lang: TLanguage]: Map<string, string>;
+};
