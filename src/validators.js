@@ -1,8 +1,6 @@
 import Joi from 'joi';
 import * as enums from './enums.js';
 
-const isBrowser = typeof window !== 'undefined';
-
 export const PostSchema = Joi.object({
   content: Joi.string().required(),
   causes_tags: Joi.array()
@@ -87,7 +85,7 @@ export const OrganizationSchema = Joi.object({
   name: Joi.string().required(),
   bio: Joi.string(),
   description: Joi.string(),
-  email: Joi.string().email({tlds: {allow: !isBrowser}}).required(),
+  email: Joi.string().email().required(),
   phone: Joi.string(),
   type: Joi.string().valid(...Object.values(enums.OrganizationType)),
   city: Joi.string(),
