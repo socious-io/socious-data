@@ -159,7 +159,6 @@ export const SearchSchema = Joi.object({
   type: Joi.string()
     .valid(...Object.values(enums.SearchType))
     .required(),
-  current_user_id: Joi.string().uuid().required(),
   filter: Joi.object()
 });
 
