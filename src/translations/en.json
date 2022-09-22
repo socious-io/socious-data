@@ -262,5 +262,13 @@
   "PASSION.VEGANISM": "Veganism",
   "PASSION.BLACK_LIVES_MATTER": "Black Lives Matter",
   "PASSION.ISLAMOPHOBIA": "Islamophobia",
-  "PASSION.ANTI_SEMITISM": "Anti Semitism"
+  "PASSION.ANTI_SEMITISM": "Anti Semitism",
+  "ORGTYPE.SOCIAL": "Social Business",
+  "ORGTYPE.NONPROFIT": "Non-profit / Charity",
+  "ORGTYPE.COOP": "Social Co-operative",
+  "ORGTYPE.IIF": "Impact Investing Funds/Foundations",
+  "ORGTYPE.PUBLIC": "Public Institution",
+  "ORGTYPE.INTERGOV": "Intergovernmental Organization (e.g. UN)",
+  "ORGTYPE.DEPARTMENT": "Impact department of a for profit company (e.g. CSR)",
+  "ORGTYPE.OTHER": "Other"
 }
