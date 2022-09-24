@@ -22,7 +22,7 @@ export const SocialCauses = {
   DIVERSITY_INCLUSION: 'DIVERSITY_INCLUSION',
   INDIGENOUS_PEOPLES: 'INDIGENOUS_PEOPLES',
   DISABILITY: 'DISABILITY',
-  LGBTQI: 'LGBTQI+',
+  LGBTQI: 'LGBTQI',
   REFUGEE: 'REFUGEE',
   MIGRANTS: 'MIGRANTS',
   ORPHANS: 'ORPHANS',
@@ -50,7 +50,7 @@ export const SocialCauses = {
   VEGANISM: 'VEGANISM',
   BLACK_LIVES_MATTER: 'BLACK_LIVES_MATTER',
   ISLAMOPHOBIA: 'ISLAMOPHOBIA',
-  ANTI_SEMITISM: 'ANTI-SEMITISM',
+  ANTI_SEMITISM: 'ANTI_SEMITISM',
 };
 
 export const ApplicantStatus = {
@@ -126,7 +126,6 @@ export const NotificationType = {
   APPLICATION: 'APPLICATION',
 };
 
-
 export const NotificationTitle = {
   FOLLOWED: 'Followed',
   COMMENT_LIKE: 'Comment liked',
@@ -137,7 +136,6 @@ export const NotificationTitle = {
   COMMENT: 'New commented',
   APPLICATION: 'Project applied',
 };
-
 
 export const IdentityType = {
   ORG: 'organizations',
@@ -161,8 +159,8 @@ export const SearchType = {
   RELATED_USERS: 'related_users',
   PROJECTS: 'projects',
   CHATS: 'chats',
-  ORGANIZATIONS: 'organizations'
-}
+  ORGANIZATIONS: 'organizations',
+};
 
 export const MediaContentType = {
   JPEG: 'image/jpeg',
