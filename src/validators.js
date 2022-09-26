@@ -99,7 +99,7 @@ export const OrganizationSchema = Joi.object({
 });
 
 export const usernamePattern =
-  /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/;
+  /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._-]+(?<![_.])$/;
 
 export const languagePattern = /^[a-z][a-z](-[a-z][a-z])?$/;
 
