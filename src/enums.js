@@ -167,3 +167,10 @@ export const MediaContentType = {
   PNG: 'image/png',
   PDF: 'application/pdf',
 };
+
+
+export const PaymentCurrency = {
+  USD: 'USD',
+  JPY: 'JPY',
+  EUR: 'EUR'
+}
