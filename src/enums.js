@@ -174,3 +174,7 @@ export const PaymentCurrency = {
   JPY: 'JPY',
   EUR: 'EUR'
 }
+
+export const PaymentService = {
+  STRIPE: 'STRIPE'
+}
