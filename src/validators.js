@@ -99,7 +99,7 @@ export const OrganizationSchema = Joi.object({
 });
 
 export const usernamePattern =
-  /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._-]+(?<![_.])$/;
+  /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-z][a-z0-9._-]+$/;
 
 export const languagePattern = /^[a-z][a-z](-[a-z][a-z])?$/;
 
@@ -159,7 +159,7 @@ export const SearchSchema = Joi.object({
   type: Joi.string()
     .valid(...Object.values(enums.SearchType))
     .required(),
-  filter: Joi.object()
+  filter: Joi.object(),
 });
 
 export const UUID = Joi.string().uuid();
