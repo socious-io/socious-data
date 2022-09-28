@@ -170,14 +170,13 @@ export const UUID = Joi.string().uuid();
 
 export const UUIDs = Joi.array().items(Joi.string().uuid());
 
-export const DonateSchema = Joi.object({
+export const PaymentSchema = Joi.object({
   amount: Joi.number().required(),
   service: Joi.string()
     .valid(...Object.values(enums.PaymentService))
     .required(),
   currency: Joi.string()
-    .valid(...Object.values(enums.PaymentCurrency))
-    .required(),
+    .valid(...Object.values(enums.PaymentCurrency)),
   description: Joi.string(),
   callback: Joi.uri().required()
 });
