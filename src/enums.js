@@ -168,13 +168,12 @@ export const MediaContentType = {
   PDF: 'application/pdf',
 };
 
-
 export const PaymentCurrency = {
   USD: 'USD',
   JPY: 'JPY',
-  EUR: 'EUR'
-}
+  EUR: 'EUR',
+};
 
 export const PaymentService = {
-  STRIPE: 'STRIPE'
-}
+  STRIPE: 'STRIPE',
+};

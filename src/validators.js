@@ -165,3 +165,11 @@ export const SearchSchema = Joi.object({
 export const UUID = Joi.string().uuid();
 
 export const UUIDs = Joi.array().items(Joi.string().uuid());
+
+export const DonateSchema = Joi.object({
+  amount: Joi.number().required(),
+  currency: Joi.string()
+    .valid(...Object.values(enums.PaymentCurrency))
+    .required(),
+  description: Joi.string(),
+});
