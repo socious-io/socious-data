@@ -96,6 +96,10 @@ export const OrganizationSchema = Joi.object({
   ),
   website: Joi.string().uri(),
   mobile_country_code: Joi.string().regex(/^\+[0-9 -]+/),
+  image: Joi.string().uuid(),
+  cover_image: Joi.string().uuid(),
+  mission: Joi.string(),
+  culture: Joi.string(),
 });
 
 export const usernamePattern =
@@ -175,4 +179,5 @@ export const DonateSchema = Joi.object({
     .valid(...Object.values(enums.PaymentCurrency))
     .required(),
   description: Joi.string(),
+  callback: Joi.uri().required()
 });
