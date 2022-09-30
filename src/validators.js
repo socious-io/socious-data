@@ -179,5 +179,5 @@ export const PaymentSchema = Joi.object({
   currency: Joi.string()
     .valid(...Object.values(enums.PaymentCurrency)),
   description: Joi.string(),
-  callback: Joi.uri().required()
+  callback: Joi.string().uri().required()
 });
