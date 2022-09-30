@@ -150,6 +150,7 @@ export const ProjectSchema = Joi.object({
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
   country: Joi.string().min(2).max(3),
+  city: Joi.string(),
 });
 
 export const QuestionSchema = Joi.object({
