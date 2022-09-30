@@ -30,10 +30,12 @@ export const ApplicantSchema = Joi.object({
 });
 
 export const ApplicantOfferSchema = Joi.object({
-  offer_rate: Joi.string().required(),
+  offer_rate: Joi.number(),
   offer_message: Joi.string().required(),
   due_date: Joi.string().isoDate(),
   assignment_total: Joi.number(),
+  weekly_limit: Joi.number(),
+  total_hours: Joi.number()
 });
 
 export const ApplicantRejectSchema = Joi.object({
