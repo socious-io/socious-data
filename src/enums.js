@@ -100,7 +100,7 @@ export const ProjectPaymentType = {
 };
 
 export const ProjectPaymentSchemeType = {
-  HOURL: 'HOURLY',
+  HOURLY: 'HOURLY',
   FIXED: 'FIXED',
 };
 
