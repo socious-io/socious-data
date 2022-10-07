@@ -24,8 +24,11 @@ export const AnswerSchema = Joi.object({
 
 export const ApplicantSchema = Joi.object({
   cover_letter: Joi.string().required(),
-  payment_type: Joi.number(),
+  payment_type: Joi.string().valid(...Object.values(enums.ProjectPaymentType)),
   payment_rate: Joi.number(),
+  cv_name: Joi.string(),
+  cv_link: Joi.string().uri(),
+  share_contact_info: Joi.boolean(),
   answers: Joi.array().items(AnswerSchema),
 });
 
@@ -143,6 +146,10 @@ export const ProjectSchema = Joi.object({
   payment_currency: Joi.string().allow(null),
   payment_range_lower: Joi.string().allow(null),
   payment_range_higher: Joi.string().allow(null),
+  weekly_hours_lower: Joi.string().allow(null),
+  weekly_hours_higher: Joi.string().allow(null),
+  commitment_hours_lower: Joi.string().allow(null),
+  commitment_hours_higher: Joi.string().allow(null),
   experience_level: Joi.number(),
   status: Joi.string().valid(...Object.values(enums.ProjectStatusType)),
   project_type: Joi.string().valid(...Object.values(enums.ProjectType)),
