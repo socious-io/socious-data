@@ -30,6 +30,7 @@ export const ApplicantSchema = Joi.object({
   cv_link: Joi.string().uri(),
   share_contact_info: Joi.boolean(),
   answers: Joi.array().items(AnswerSchema),
+  attachment: Joi.string().uuid(),
 });
 
 export const ApplicantOfferSchema = Joi.object({
@@ -159,7 +160,7 @@ export const ProjectSchema = Joi.object({
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
   country: Joi.string().min(2).max(3),
-  city: Joi.string(),
+  city: Joi.string(),  
 });
 
 export const QuestionSchema = Joi.object({
