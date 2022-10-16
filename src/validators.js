@@ -130,8 +130,11 @@ export const UpdateProfileSchema = Joi.object({
   social_causes: Joi.array().items(
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
-  skills: Joi.array().items(Joi.string()),
+  skills: Joi.array().items(Joi.string()),  
   mobile_country_code: Joi.string().regex(/^\+[0-9 -]+/),
+  certificates: Joi.array().items(Joi.string()),
+  golas: Joi.string(),
+  educations : Joi.array().items(Joi.string()),
 });
 
 export const ProjectSchema = Joi.object({
@@ -191,3 +194,20 @@ export const PaymentSchema = Joi.object({
   description: Joi.string(),
   callback: Joi.string().uri().required()
 });
+
+
+export const ProfileExperienceSchema = Joi.object({
+  org_id: Joi.string().uuid().required(),
+  title: Joi.string().required(),
+  description: Joi.string(),
+  skills: Joi.array().items(Joi.string()),
+  start: Joi.string().isoDate().required(),
+  end: Joi.string().isoDate(),
+})
+
+
+export const ProfileAddLanguageSchema = Joi.object({
+  name: Joi.string()
+    .valid(...Object.keys(enums.Languages)).required(),
+  level: Joi.string()
+})
