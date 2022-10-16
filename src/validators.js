@@ -199,8 +199,8 @@ export const ProfileExperienceSchema = Joi.object({
   title: Joi.string().required(),
   description: Joi.string(),
   skills: Joi.array().items(Joi.string()),
-  start: Joi.string().isoDate().required(),
-  end: Joi.string().isoDate(),
+  start_at: Joi.string().isoDate().required(),
+  end_at: Joi.string().isoDate(),
 });
 
 export const ProfileAddLanguageSchema = Joi.object({
