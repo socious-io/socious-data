@@ -39,7 +39,7 @@ export const ApplicantOfferSchema = Joi.object({
   due_date: Joi.string().isoDate(),
   assignment_total: Joi.number(),
   weekly_limit: Joi.number(),
-  total_hours: Joi.number()
+  total_hours: Joi.number(),
 });
 
 export const ApplicantRejectSchema = Joi.object({
@@ -130,11 +130,11 @@ export const UpdateProfileSchema = Joi.object({
   social_causes: Joi.array().items(
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
-  skills: Joi.array().items(Joi.string()),  
+  skills: Joi.array().items(Joi.string()),
   mobile_country_code: Joi.string().regex(/^\+[0-9 -]+/),
   certificates: Joi.array().items(Joi.string()),
-  golas: Joi.string(),
-  educations : Joi.array().items(Joi.string()),
+  goals: Joi.string(),
+  educations: Joi.array().items(Joi.string()),
 });
 
 export const ProjectSchema = Joi.object({
@@ -163,7 +163,7 @@ export const ProjectSchema = Joi.object({
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
   country: Joi.string().min(2).max(3),
-  city: Joi.string(),  
+  city: Joi.string(),
 });
 
 export const QuestionSchema = Joi.object({
@@ -189,12 +189,10 @@ export const PaymentSchema = Joi.object({
   service: Joi.string()
     .valid(...Object.values(enums.PaymentService))
     .required(),
-  currency: Joi.string()
-    .valid(...Object.values(enums.PaymentCurrency)),
+  currency: Joi.string().valid(...Object.values(enums.PaymentCurrency)),
   description: Joi.string(),
-  callback: Joi.string().uri().required()
+  callback: Joi.string().uri().required(),
 });
-
 
 export const ProfileExperienceSchema = Joi.object({
   org_id: Joi.string().uuid().required(),
@@ -203,11 +201,11 @@ export const ProfileExperienceSchema = Joi.object({
   skills: Joi.array().items(Joi.string()),
   start: Joi.string().isoDate().required(),
   end: Joi.string().isoDate(),
-})
-
+});
 
 export const ProfileAddLanguageSchema = Joi.object({
   name: Joi.string()
-    .valid(...Object.keys(enums.Languages)).required(),
-  level: Joi.string()
-})
+    .valid(...Object.keys(enums.Languages))
+    .required(),
+  level: Joi.string(),
+});
