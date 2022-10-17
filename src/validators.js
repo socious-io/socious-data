@@ -207,5 +207,5 @@ export const ProfileAddLanguageSchema = Joi.object({
   name: Joi.string()
     .valid(...Object.keys(enums.Languages))
     .required(),
-  level: Joi.string(),
+  level: Joi.string().valid(...Object.values(enums.LanguageLvel)),
 });
