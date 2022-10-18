@@ -124,6 +124,14 @@ export const NotificationType = {
   SHARE_PROJECT: 'SHARE_PROJECT',
   COMMENT: 'COMMENT',
   APPLICATION: 'APPLICATION',
+  OFFER: 'OFFER',
+  REJECT: 'REJECT',
+  APPROVED: 'APPROVED',
+  HIRED: 'HIRED',
+  PROJECT_COMPLETE: 'PROJECT_COMPLETE',
+  EMPLOYEE_CANCELED: 'EMPLOYEE_CANCELED',
+  EMPLOYER_CANCELED: 'EMPLOYER_CANCELED',
+  EMPLOYER_CONFIRMED: 'EMPLOYER_CONFIRMED',
 };
 
 export const NotificationTitle = {
@@ -135,6 +143,14 @@ export const NotificationTitle = {
   SHARE_PROJECT: 'Project shared',
   COMMENT: 'New commented',
   APPLICATION: 'Project applied',
+  OFFER: 'Have an offer',
+  REJECT: 'Rejected',
+  APPROVED: 'Offer approved',
+  HIRED: 'Hired',
+  PROJECT_COMPLETE: 'Project complete',
+  EMPLOYEE_CANCELED: 'Employee canceled project',
+  EMPLOYER_CANCELED: 'Employer removed you from project',
+  EMPLOYER_CONFIRMED: 'Employer confirmed your work',
 };
 
 export const IdentityType = {
