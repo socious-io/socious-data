@@ -210,12 +210,15 @@ export const ProfileAddLanguageSchema = Joi.object({
   level: Joi.string().valid(...Object.values(enums.LanguageLvel)),
 });
 
-
 export const NotificationsSettingsSchema = Joi.object({
-  settings: Joi.array().items(Joi.object({
-    type: Joi.string().valid(...Object.values(enums.NotificationType)).required(),
-    email: Joi.boolean().required(),
-    in_app: Joi.boolean().required(),
-    push: Joi.boolean().required(),
-  }))
-})
+  settings: Joi.array().items(
+    Joi.object({
+      type: Joi.string()
+        .valid(...Object.values(enums.NotificationType))
+        .required(),
+      email: Joi.boolean().required(),
+      in_app: Joi.boolean().required(),
+      push: Joi.boolean().required(),
+    }),
+  ),
+});
