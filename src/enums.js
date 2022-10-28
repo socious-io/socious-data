@@ -403,4 +403,5 @@ export const OfferStatus = {
   APPROVED: 'APPROVED',
   HIRED: 'HIRED',
   CLOSED: 'CLOSED',
+  CANCELED: 'CANCELED',
 };
