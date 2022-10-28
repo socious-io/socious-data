@@ -129,9 +129,9 @@ export const NotificationType = {
   APPROVED: 'APPROVED',
   HIRED: 'HIRED',
   PROJECT_COMPLETE: 'PROJECT_COMPLETE',
-  EMPLOYEE_CANCELED: 'EMPLOYEE_CANCELED',
-  EMPLOYER_CANCELED: 'EMPLOYER_CANCELED',
-  EMPLOYER_CONFIRMED: 'EMPLOYER_CONFIRMED',
+  ASSIGNEE_CANCELED: 'ASSIGNEE_CANCELED',
+  ASSIGNER_CANCELED: 'ASSIGNER_CANCELED',
+  ASSIGNER_CONFIRMED: 'ASSIGNER_CONFIRMED',
 };
 
 export const NotificationTitle = {
@@ -148,9 +148,9 @@ export const NotificationTitle = {
   APPROVED: 'Offer approved',
   HIRED: 'Hired',
   PROJECT_COMPLETE: 'Project complete',
-  EMPLOYEE_CANCELED: 'Employee canceled project',
-  EMPLOYER_CANCELED: 'Employer removed you from project',
-  EMPLOYER_CONFIRMED: 'Employer confirmed your work',
+  ASSIGNEE_CANCELED: 'Mission assignee canceled project',
+  ASSIGNER_CANCELED: 'Mission assigner removed you from project',
+  ASSIGNER_CONFIRMED: 'Mission assigner confirmed your work',
 };
 
 export const IdentityType = {
