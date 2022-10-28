@@ -33,7 +33,7 @@ export const ApplicantSchema = Joi.object({
   attachment: Joi.string().uuid(),
 });
 
-export const ApplicantOfferSchema = Joi.object({
+export const OfferSchema = Joi.object({
   offer_rate: Joi.number(),
   offer_message: Joi.string().required(),
   due_date: Joi.string().isoDate(),
@@ -207,7 +207,7 @@ export const ProfileAddLanguageSchema = Joi.object({
   name: Joi.string()
     .valid(...Object.keys(enums.Languages))
     .required(),
-  level: Joi.string().valid(...Object.values(enums.LanguageLvel)),
+  level: Joi.string().valid(...Object.values(enums.LanguageLevel)),
 });
 
 export const NotificationsSettingsSchema = Joi.object({

@@ -381,10 +381,26 @@ export const Languages = {
   ZU: 'Zulu',
 };
 
-export const LanguageLvel = {
+export const LanguageLevel = {
   BASIC: 'BASIC',
   CONVERSANT: 'CONVERSANT',
   PROFICIENT: 'PROFICIENT',
   FLUENT: 'FLUENT',
   NATIVE: 'NATIVE',
+};
+
+export const MissionStatus = {
+  ACTIVE: 'ACTIVE',
+  COMPLETE: 'COMPLETE',
+  CONFIRMED: 'CONFIRMED',
+  CANCELED: 'CANCELED',
+  KICKED_OUT: 'KICKED_OUT',
+};
+
+export const OfferStatus = {
+  PENDING: 'PENDING',
+  WITHDRAWN: 'WITHDRAWN',
+  APPROVED: 'APPROVED',
+  HIRED: 'HIRED',
+  CLOSED: 'CLOSED',
 };
