@@ -222,3 +222,7 @@ export const NotificationsSettingsSchema = Joi.object({
     }),
   ),
 });
+
+export const ConnectSchema = Joi.object({
+  text: Joi.string().max(300),
+});
