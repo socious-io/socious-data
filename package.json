@@ -1,6 +1,6 @@
 {
   "name": "@socious/data",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Data definitions for Socious API",
   "type": "module",
   "main": "./src/index.js",
