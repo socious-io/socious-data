@@ -94,9 +94,10 @@ export const OrganizationSchema = Joi.object({
   email: Joi.string().email().required(),
   phone: Joi.string(),
   type: Joi.string().valid(...Object.values(enums.OrganizationType)),
-  city: Joi.string(),
-  address: Joi.string(),
   country: Joi.string().min(2).max(3),
+  city: Joi.string(),
+  geoname_id: Joi.number().integer().min(0),
+  address: Joi.string(),
   social_causes: Joi.array().items(
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
@@ -120,9 +121,10 @@ export const UpdateProfileSchema = Joi.object({
   bio: Joi.string(),
   mission: Joi.string(),
   language: Joi.string().regex(languagePattern),
-  city: Joi.string(),
-  address: Joi.string(),
   country: Joi.string().min(2).max(3),
+  city: Joi.string(),
+  geoname_id: Joi.number().integer().min(0),
+  address: Joi.string(),
   phone: Joi.string(),
   wallet_address: Joi.string(),
   avatar: Joi.string().uuid(),
@@ -164,6 +166,7 @@ export const ProjectSchema = Joi.object({
   ),
   country: Joi.string().min(2).max(3),
   city: Joi.string(),
+  geoname_id: Joi.number().integer().min(0),
 });
 
 export const QuestionSchema = Joi.object({
