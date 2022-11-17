@@ -176,7 +176,7 @@ export const QuestionSchema = Joi.object({
 });
 
 export const SearchSchema = Joi.object({
-  q: Joi.string().required(),
+  q: Joi.string(),
   type: Joi.string()
     .valid(...Object.values(enums.SearchType))
     .required(),
