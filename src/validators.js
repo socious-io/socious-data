@@ -192,7 +192,7 @@ export const CardSchema = Joi.object({
   numbers: Joi.string().min(8).required(),
   exp_month: Joi.number().min(1).max(12).required(),
   exp_year: Joi.number().min(2023).required(),
-  cvc: Joi.number().min(100).required(),
+  cvc: Joi.string().min(3).required(),
 });
 
 export const PaymentSchema = Joi.object({
