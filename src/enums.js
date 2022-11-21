@@ -133,7 +133,7 @@ export const NotificationType = {
   ASSIGNER_CANCELED: 'ASSIGNER_CANCELED',
   ASSIGNER_CONFIRMED: 'ASSIGNER_CONFIRMED',
   CONNECT: 'CONNECT',
-  MEMBERED: 'MEMBERED'
+  MEMBERED: 'MEMBERED',
 };
 
 export const NotificationTitle = {
@@ -154,7 +154,7 @@ export const NotificationTitle = {
   ASSIGNER_CANCELED: 'Mission assigner removed you from project',
   ASSIGNER_CONFIRMED: 'Mission assigner confirmed your work',
   CONNECT: 'Connect request',
-  MEMBERED: 'Membered'
+  MEMBERED: 'Membered',
 };
 
 export const IdentityType = {

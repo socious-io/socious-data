@@ -187,14 +187,22 @@ export const UUID = Joi.string().uuid();
 
 export const UUIDs = Joi.array().items(Joi.string().uuid());
 
+export const CardSchema = Joi.object({
+  holder_name: Joi.string(),
+  numbers: Joi.string().min(8).required(),
+  exp_month: Joi.number().min(1).max(12).required(),
+  exp_year: Joi.number().min(2023).required(),
+  cvc: Joi.number().min(100).required(),
+});
+
 export const PaymentSchema = Joi.object({
   amount: Joi.number().required(),
   service: Joi.string()
     .valid(...Object.values(enums.PaymentService))
     .required(),
+  source: Joi.string().required(),
   currency: Joi.string().valid(...Object.values(enums.PaymentCurrency)),
   description: Joi.string(),
-  callback: Joi.string().uri().required(),
 });
 
 export const ProfileExperienceSchema = Joi.object({
