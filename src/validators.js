@@ -183,6 +183,13 @@ export const SearchSchema = Joi.object({
   filter: Joi.object(),
 });
 
+export const EscrowSchema = Joi.object({
+  service: Joi.string()
+    .valid(...Object.values(enums.PaymentService))
+    .required(),
+  source: Joi.string().required(),
+});
+
 export const UUID = Joi.string().uuid();
 
 export const UUIDs = Joi.array().items(Joi.string().uuid());
