@@ -37,7 +37,7 @@ export const OfferSchema = Joi.object({
   offer_rate: Joi.number(),
   offer_message: Joi.string().required(),
   due_date: Joi.string().isoDate(),
-  assignment_total: Joi.number(),
+  assignment_total: Joi.number().required(),
   weekly_limit: Joi.number(),
   total_hours: Joi.number(),
 });
