@@ -409,3 +409,7 @@ export const OfferStatus = {
   CLOSED: 'CLOSED',
   CANCELED: 'CANCELED',
 };
+
+export const OAuthProviders = {
+  STRIPE: 'STRIPE',
+};
