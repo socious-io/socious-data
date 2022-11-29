@@ -186,6 +186,8 @@ export const MediaContentType = {
   JPEG: 'image/jpeg',
   PNG: 'image/png',
   PDF: 'application/pdf',
+  DOC: 'application/msword',
+  DOCX: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 };
 
 export const PaymentCurrency = {
