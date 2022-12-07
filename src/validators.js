@@ -156,12 +156,12 @@ export const ProjectSchema = Joi.object({
   weekly_hours_higher: Joi.string().allow(null),
   commitment_hours_lower: Joi.string().allow(null),
   commitment_hours_higher: Joi.string().allow(null),
-  experience_level: Joi.number(),
+  experience_level: Joi.number().min(0).max(3),
   status: Joi.string().valid(...Object.values(enums.ProjectStatusType)),
   project_type: Joi.string().valid(...Object.values(enums.ProjectType)),
   project_length: Joi.string().valid(...Object.values(enums.ProjectLengthType)),
   skills: Joi.array().items(Joi.string()),
-  causes_tags: Joi.array().items(
+  causes_tags: Joi.array().max(1).items(
     Joi.string().valid(...Object.values(enums.SocialCauses)),
   ),
   country: Joi.string().min(2).max(3),
