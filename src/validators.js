@@ -161,9 +161,9 @@ export const ProjectSchema = Joi.object({
   project_type: Joi.string().valid(...Object.values(enums.ProjectType)),
   project_length: Joi.string().valid(...Object.values(enums.ProjectLengthType)),
   skills: Joi.array().items(Joi.string()),
-  causes_tags: Joi.array().max(1).items(
-    Joi.string().valid(...Object.values(enums.SocialCauses)),
-  ),
+  causes_tags: Joi.array()
+    .max(1)
+    .items(Joi.string().valid(...Object.values(enums.SocialCauses))),
   country: Joi.string().min(2).max(3),
   city: Joi.string(),
   geoname_id: Joi.number().integer().min(0).empty(null).optional(),
