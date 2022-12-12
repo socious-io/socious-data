@@ -167,6 +167,7 @@ export const ProjectSchema = Joi.object({
   country: Joi.string().min(2).max(3),
   city: Joi.string(),
   geoname_id: Joi.number().integer().min(0).empty(null).optional(),
+  job_category_id: Joi.string().uuid().required(),
 });
 
 export const QuestionSchema = Joi.object({
