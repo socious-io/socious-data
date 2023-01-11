@@ -42,6 +42,15 @@ export const OfferSchema = Joi.object({
   total_hours: Joi.number(),
 });
 
+export const ReportSchema = Joi.object({
+  blocked: Joi.boolean(),
+  comment: Joi.string().required(),
+  post_id: Joi.string().uuid(),
+  user_id: Joi.string().uuid(),
+  org_id: Joi.string().uuid(),
+  comment_id: Joi.string().uuid()
+});
+
 export const SubmitWorkSchema = Joi.object({
   total_hours: Joi.number(),
   start_at: Joi.string().isoDate().required(),
