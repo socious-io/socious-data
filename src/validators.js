@@ -44,11 +44,7 @@ export const OfferSchema = Joi.object({
 
 export const ReportSchema = Joi.object({
   blocked: Joi.boolean(),
-  comment: Joi.string().required(),
-  post_id: Joi.string().uuid(),
-  user_id: Joi.string().uuid(),
-  org_id: Joi.string().uuid(),
-  comment_id: Joi.string().uuid()
+  comment: Joi.string().required()
 });
 
 export const SubmitWorkSchema = Joi.object({
