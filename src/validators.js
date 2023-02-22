@@ -200,6 +200,11 @@ export const EscrowSchema = Joi.object({
     .valid(...Object.values(enums.PaymentService))
     .required(),
   source: Joi.string().required(),
+  txHash: Joi.alternatives().conditional('service', {
+    is: enums.PaymentService.CRYPTO,
+    then: Joi.string().required(),
+    otherwise: Joi.forbidden(),
+  })
 });
 
 export const UUID = Joi.string().uuid();
@@ -222,6 +227,11 @@ export const PaymentSchema = Joi.object({
   source: Joi.string().required(),
   currency: Joi.string().valid(...Object.values(enums.PaymentCurrency)),
   description: Joi.string(),
+  txHash: Joi.alternatives().conditional('service', {
+    is: enums.PaymentService.CRYPTO,
+    then: Joi.string().required(),
+    otherwise: Joi.forbidden(),
+  })
 });
 
 export const ProfileExperienceSchema = Joi.object({

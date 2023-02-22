@@ -292,6 +292,7 @@ export const PaymentCurrency = {
 
 export const PaymentService = {
   STRIPE: 'STRIPE',
+  CRYPTO: 'CRYPTO'
 };
 
 export const Languages = {
