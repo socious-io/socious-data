@@ -204,7 +204,8 @@ export const EscrowSchema = Joi.object({
     is: enums.PaymentService.CRYPTO,
     then: Joi.string().required(),
     otherwise: Joi.forbidden(),
-  })
+  }),
+  meta: Joi.Object()
 });
 
 export const UUID = Joi.string().uuid();
