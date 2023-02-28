@@ -34,6 +34,7 @@ export const ApplicantSchema = Joi.object({
 });
 
 export const OfferSchema = Joi.object({
+  payment_mode: Joi.string().valid(...Object.values(enums.PaymentMode)),
   offer_rate: Joi.number(),
   offer_message: Joi.string().required(),
   due_date: Joi.string().isoDate(),
