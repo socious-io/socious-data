@@ -510,3 +510,9 @@ export const OfferStatus = {
 export const OAuthProviders = {
   STRIPE: 'STRIPE',
 };
+
+
+export const PaymentMode = {
+  CRYPTO: 'CRYPTO',
+  FIAT: 'FIAT'
+}
