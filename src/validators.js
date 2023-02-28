@@ -206,7 +206,7 @@ export const EscrowSchema = Joi.object({
     then: Joi.string().required(),
     otherwise: Joi.forbidden(),
   }),
-  meta: Joi.Object()
+  meta: Joi.object()
 });
 
 export const UUID = Joi.string().uuid();
