@@ -41,17 +41,22 @@ export const OfferSchema = Joi.object({
   assignment_total: Joi.number().required(),
   weekly_limit: Joi.number(),
   total_hours: Joi.number(),
+  crypto_currency_address: Joi.alternatives().conditional('payment_mode', {
+    is: enums.PaymentMode.CRYPTO,
+    then: Joi.string().required(),
+    otherwise: Joi.forbidden(),
+  }),
 });
 
 export const ReportSchema = Joi.object({
   blocked: Joi.boolean(),
-  comment: Joi.string().required()
+  comment: Joi.string().required(),
 });
 
 export const SubmitWorkSchema = Joi.object({
   total_hours: Joi.number(),
   start_at: Joi.string().isoDate().required(),
-  end_at: Joi.string().isoDate().required()
+  end_at: Joi.string().isoDate().required(),
 });
 
 export const ApplicantRejectSchema = Joi.object({
@@ -206,7 +211,7 @@ export const EscrowSchema = Joi.object({
     then: Joi.string().required(),
     otherwise: Joi.forbidden(),
   }),
-  meta: Joi.object()
+  meta: Joi.object(),
 });
 
 export const UUID = Joi.string().uuid();
@@ -233,7 +238,7 @@ export const PaymentSchema = Joi.object({
     is: enums.PaymentService.CRYPTO,
     then: Joi.string().required(),
     otherwise: Joi.forbidden(),
-  })
+  }),
 });
 
 export const ProfileExperienceSchema = Joi.object({

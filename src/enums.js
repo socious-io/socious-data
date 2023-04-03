@@ -292,7 +292,7 @@ export const PaymentCurrency = {
 
 export const PaymentService = {
   STRIPE: 'STRIPE',
-  CRYPTO: 'CRYPTO'
+  CRYPTO: 'CRYPTO',
 };
 
 export const Languages = {
@@ -511,8 +511,7 @@ export const OAuthProviders = {
   STRIPE: 'STRIPE',
 };
 
-
 export const PaymentMode = {
   CRYPTO: 'CRYPTO',
-  FIAT: 'FIAT'
-}
+  FIAT: 'FIAT',
+};
