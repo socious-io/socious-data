@@ -287,7 +287,6 @@ export const MediaContentType = {
 export const PaymentCurrency = {
   USD: 'USD',
   JPY: 'JPY',
-  EUR: 'EUR',
 };
 
 export const PaymentService = {

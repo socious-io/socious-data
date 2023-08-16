@@ -41,6 +41,7 @@ export const OfferSchema = Joi.object({
   assignment_total: Joi.number().required(),
   weekly_limit: Joi.number(),
   total_hours: Joi.number(),
+  currency: Joi.string().valid(...Object.values(enums.PaymentCurrency)),
   crypto_currency_address: Joi.alternatives().conditional('payment_mode', {
     is: enums.PaymentMode.CRYPTO,
     then: Joi.string().required(),
