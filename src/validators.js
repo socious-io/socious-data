@@ -221,10 +221,8 @@ export const UUIDs = Joi.array().items(Joi.string().uuid());
 
 export const CardSchema = Joi.object({
   holder_name: Joi.string(),
-  numbers: Joi.string().min(8).required(),
-  exp_month: Joi.number().min(1).max(12).required(),
-  exp_year: Joi.number().min(2023).required(),
-  cvc: Joi.string().min(3).required(),
+  token: Joi.string().required(),
+  meta: Joi.object()
 });
 
 export const PaymentSchema = Joi.object({
