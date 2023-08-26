@@ -222,7 +222,6 @@ export const UUIDs = Joi.array().items(Joi.string().uuid());
 export const CardSchema = Joi.object({
   holder_name: Joi.string(),
   token: Joi.string().required(),
-  jp_token: Joi.string().required(),
   meta: Joi.object()
 });
 
