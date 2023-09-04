@@ -107,6 +107,7 @@ export const DeviceNewSchema = Joi.object({
 
 export const OrganizationSchema = Joi.object({
   name: Joi.string().required(),
+  shortname: Joi.string().required(),
   bio: Joi.string(),
   description: Joi.string(),
   email: Joi.string().email().required(),
