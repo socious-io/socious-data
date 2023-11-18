@@ -205,6 +205,7 @@ export const OrganizationType = {
   INTERGOV: 'INTERGOV',
   DEPARTMENT: 'DEPARTMENT',
   OTHER: 'OTHER',
+  STARTUP: 'STARTUP',
 };
 
 export const NotificationType = {
@@ -513,4 +514,16 @@ export const OAuthProviders = {
 export const PaymentMode = {
   CRYPTO: 'CRYPTO',
   FIAT: 'FIAT',
+};
+
+export const OrganizationSize = {
+  A: 'A',
+  B: 'B',
+  C: 'C',
+  D: 'D',
+  E: 'E',
+  F: 'F',
+  G: 'G',
+  H: 'H',
+  I: 'I',
 };
