@@ -112,6 +112,7 @@ export const OrganizationSchema = Joi.object({
   description: Joi.string(),
   email: Joi.string().email().required(),
   phone: Joi.string(),
+  size: Joi.string().valid(...Object.values(enums.OrganizationSize)),
   type: Joi.string().valid(...Object.values(enums.OrganizationType)),
   country: Joi.string().min(2).max(3),
   city: Joi.string(),
