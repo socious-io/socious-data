@@ -206,6 +206,10 @@ export const OrganizationType = {
   DEPARTMENT: 'DEPARTMENT',
   OTHER: 'OTHER',
   STARTUP: 'STARTUP',
+  EDUCATIONAL: 'EDUCATIONAL',
+  HEALTHCARE: 'HEALTHCARE',
+  RELIGIOUS: 'RELIGIOUS',
+  COMMERCIAL: 'COMMERCIAL'
 };
 
 export const NotificationType = {
