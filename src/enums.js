@@ -209,7 +209,7 @@ export const OrganizationType = {
   EDUCATIONAL: 'EDUCATIONAL',
   HEALTHCARE: 'HEALTHCARE',
   RELIGIOUS: 'RELIGIOUS',
-  COMMERCIAL: 'COMMERCIAL'
+  COMMERCIAL: 'COMMERCIAL',
 };
 
 export const NotificationType = {
@@ -530,4 +530,12 @@ export const OrganizationSize = {
   G: 'G',
   H: 'H',
   I: 'I',
+};
+
+export const AdditionalType = {
+  PORTFOLIO: 'PORTFOLIO',
+  CERTIFICATE: 'CERTIFICATE',
+  EDUCATION: 'EDUCATION',
+  BENEFIT: 'BENEFIT',
+  RECOMMENDATIONS: 'RECOMMENDATIONS',
 };

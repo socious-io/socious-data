@@ -279,3 +279,21 @@ export const ConnectSchema = Joi.object({
 export const OAuthStripeSchema = Joi.object({
   code: Joi.string().required(),
 });
+
+export const AdditinalSchema = Joi.object({
+  type: Joi.string()
+    .valid(...Object.values(enums.AdditionalType))
+    .required(),
+  title: Joi.string().required(),
+  description: Joi.string(),
+  url: Joi.string(),
+  image: Joi.string(),
+  sub_image: Joi.string(),
+  meta: Joi.object(),
+  ref_identity_id: Joi.alternatives().conditional('type', {
+    is: enums.AdditionalType.RECOMMENDATIONS,
+    then: Joi.string().required(),
+    otherwise: Joi.forbidden(),
+  }),
+  enabled: Joi.boolean(),
+});
