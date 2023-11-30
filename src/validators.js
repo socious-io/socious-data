@@ -131,7 +131,7 @@ export const OrganizationSchema = Joi.object({
 });
 
 export const usernamePattern =
-  /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-z][a-z0-9._-]+$/;
+  /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-z0-9._-]+$/;
 
 export const languagePattern = /^[a-z][a-z](-[a-z][a-z])?$/;
 
