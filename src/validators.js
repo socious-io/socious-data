@@ -247,6 +247,12 @@ export const ProfileExperienceSchema = Joi.object({
   org_id: Joi.string().uuid().required(),
   title: Joi.string().required(),
   description: Joi.string(),
+  country: Joi.string(),
+  city: Joi.string(),
+  job_category_id: Joi.string(),
+  employment_type: Joi.string()
+    .valid(...Object.values(enums.EmploymentType))
+    .required(),
   skills: Joi.array().items(Joi.string()),
   start_at: Joi.string().isoDate().required(),
   end_at: Joi.string().isoDate(),

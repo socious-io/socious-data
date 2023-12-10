@@ -539,3 +539,9 @@ export const AdditionalType = {
   BENEFIT: 'BENEFIT',
   RECOMMENDATIONS: 'RECOMMENDATIONS',
 };
+
+export const EmploymentType = {
+  ONE_OFF: 'ONE_OFF',
+  PART_TIME: 'PART_TIME',
+  FULL_TIME: 'FULL_TIME',
+};
