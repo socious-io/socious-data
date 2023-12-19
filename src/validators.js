@@ -137,8 +137,8 @@ export const languagePattern = /^[a-z][a-z](-[a-z][a-z])?$/;
 export const namesPattern = /\p{L}+(\s\p{L}+)*(\.\p{L}+)*$/;
 
 export const UpdateProfileSchema = Joi.object({
-  first_name: Joi.string().regex(namesPattern).required(),
-  last_name: Joi.string().regex(namesPattern).required(),
+  first_name: Joi.string().min(2).required(),
+  last_name: Joi.string().min(2).required(),
   username: Joi.string().regex(usernamePattern).required(),
   bio: Joi.string(),
   mission: Joi.string(),
