@@ -134,7 +134,7 @@ export const usernamePattern =
   /^(?=.{6,24}$)(?![_.])(?!.*[_.]{2})[a-z0-9._-]+$/;
 
 export const languagePattern = /^[a-z][a-z](-[a-z][a-z])?$/;
-export const namesPattern = /^\p{L}+(([\p{M}'\-. ]\p{L})?\p{L}*)*$/;
+export const namesPattern = /(\p{L}+)(\s\p{L}+)*/;
 
 export const UpdateProfileSchema = Joi.object({
   first_name: Joi.string().regex(namesPattern).required(),
