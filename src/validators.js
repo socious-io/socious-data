@@ -257,7 +257,17 @@ export const ProfileExperienceSchema = Joi.object({
   skills: Joi.array().items(Joi.string()),
   start_at: Joi.string().isoDate().required(),
   end_at: Joi.string().isoDate(),
-  weekly_hours: Joi.number().integer()
+  weekly_hours: Joi.number().integer(),
+});
+
+export const ProfileEducationSchema = Joi.object({
+  org_id: Joi.string().uuid().required(),
+  title: Joi.string().required(),
+  description: Joi.string(),
+  degree: Joi.string(),
+  grade: Joi.string(),
+  start_at: Joi.string().isoDate().required(),
+  end_at: Joi.string().isoDate(),
 });
 
 export const ProfileAddLanguageSchema = Joi.object({

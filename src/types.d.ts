@@ -115,7 +115,7 @@ declare type TNotification =
   | 'EXPERIENCE_VERIFY_REJECTED'
   | 'EXPERIENCE_ISSUED'
   | 'EXPERIENCE_ISSUED_APPROVED'
-  | 'EXPERIENCE_ISSUED_REJECTED'
+  | 'EXPERIENCE_ISSUED_REJECTED';
 
 declare type TIdentity = 'organizations' | 'users';
 

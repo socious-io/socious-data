@@ -243,7 +243,7 @@ export const NotificationType = {
   EXPERIENCE_VERIFY_REJECTED: 'EXPERIENCE_VERIFY_REJECTED',
   EXPERIENCE_ISSUED: 'EXPERIENCE_ISSUED',
   EXPERIENCE_ISSUED_APPROVED: 'EXPERIENCE_ISSUED_APPROVED',
-  EXPERIENCE_ISSUED_REJECTED: 'EXPERIENCE_ISSUED_REJECTED'
+  EXPERIENCE_ISSUED_REJECTED: 'EXPERIENCE_ISSUED_REJECTED',
 };
 
 export const NotificationTitle = {
@@ -276,7 +276,7 @@ export const NotificationTitle = {
   EXPERIENCE_VERIFY_REJECTED: 'experience verified rejected',
   EXPERIENCE_ISSUED: 'experience issued',
   EXPERIENCE_ISSUED_APPROVED: 'experience issued approved',
-  EXPERIENCE_ISSUED_REJECTED: 'experience issued rejected'
+  EXPERIENCE_ISSUED_REJECTED: 'experience issued rejected',
 };
 
 export const IdentityType = {
