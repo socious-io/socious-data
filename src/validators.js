@@ -259,6 +259,7 @@ export const ProfileExperienceSchema = Joi.object({
   start_at: Joi.string().isoDate().required(),
   end_at: Joi.string().isoDate(),
   weekly_hours: Joi.number().integer(),
+  total_hours: Joi.number().integer(),
 });
 
 export const ProfileEducationSchema = Joi.object({
