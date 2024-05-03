@@ -2,6 +2,7 @@ import Joi from 'joi';
 import * as enums from './enums.js';
 
 export const PostSchema = Joi.object({
+  title: Joi.string(),
   content: Joi.string().required(),
   causes_tags: Joi.array()
     .items(Joi.string().valid(...Object.values(enums.SocialCauses)))
