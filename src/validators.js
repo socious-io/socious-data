@@ -15,6 +15,7 @@ export const PostSchema = Joi.object({
 export const CommentSchema = Joi.object({
   content: Joi.string().required(),
   reply_id: Joi.string().uuid(),
+  media_id: Joi.string().uuid(),
 });
 
 export const AnswerSchema = Joi.object({
