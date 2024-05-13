@@ -308,6 +308,7 @@ export const SearchType = {
   PROJECTS: 'projects',
   CHATS: 'chats',
   ORGANIZATIONS: 'organizations',
+  APPLICANTS: 'applicants'
 };
 
 export const MediaContentType = {
