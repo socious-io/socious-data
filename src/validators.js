@@ -318,3 +318,15 @@ export const AdditinalSchema = Joi.object({
   }),
   enabled: Joi.boolean(),
 });
+
+export const DisputeSchema = Joi.object({
+  title: Joi.string().required(),
+  description: Joi.string(),
+  respondent_id: Joi.string().uuid().required(),
+  evidences: array().items(Joi.string().uuid())
+});
+
+export const DisputeMessagingSchema = Joi.object({
+  message: Joi.string().required(),
+  evidences: array().items(Joi.string().uuid())
+});

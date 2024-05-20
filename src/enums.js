@@ -250,6 +250,10 @@ export const NotificationType = {
   EDUCATION_ISSUED: 'EDUCATION_ISSUED',
   EDUCATION_ISSUED_APPROVED: 'EDUCATION_ISSUED_APPROVED',
   EDUCATION_ISSUED_REJECTED: 'EDUCATION_ISSUED_REJECTED',
+  DISPUTE_INITIATED: 'DISPUTE_INITIATED',
+  DISPUTE_NEW_MESSAGE: 'DISPUTE_NEW_MESSAGE',
+  DISPUTE_NEW_RESPONSE: 'DISPUTE_NEW_RESPONSE',
+  DISPUTE_WITHDRAWN: 'DISPUTE_WITHDRAWN',
 };
 
 export const NotificationTitle = {
@@ -283,6 +287,10 @@ export const NotificationTitle = {
   EXPERIENCE_ISSUED: 'experience issued',
   EXPERIENCE_ISSUED_APPROVED: 'experience issued approved',
   EXPERIENCE_ISSUED_REJECTED: 'experience issued rejected',
+  DISPUTE_INITIATED: 'Dispute initiated',
+  DISPUTE_NEW_MESSAGE: 'Dispute new message',
+  DISPUTE_NEW_RESPONSE: 'Dispute new response',
+  DISPUTE_WITHDRAWN: 'Dispute withdrawn',
 };
 
 export const IdentityType = {
