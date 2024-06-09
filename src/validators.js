@@ -324,7 +324,7 @@ export const DisputeSchema = Joi.object({
   description: Joi.string(),
   respondent_id: Joi.string().uuid().required(),
   category_id: Joi.string().uuid().required(),
-  contract_id: Joi.string().uuid().required(),
+  mission_id: Joi.string().uuid().required(),
   evidences: Joi.array().items(Joi.string().uuid()),
 });
 
