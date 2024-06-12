@@ -254,6 +254,7 @@ export const NotificationType = {
   DISPUTE_NEW_MESSAGE: 'DISPUTE_NEW_MESSAGE',
   DISPUTE_NEW_RESPONSE: 'DISPUTE_NEW_RESPONSE',
   DISPUTE_WITHDRAWN: 'DISPUTE_WITHDRAWN',
+  DISPUTE_JUROR_CONTRIBUTION_INVITED: 'DISPUTE_JUROR_CONTRIBUTION_INVITED',
 };
 
 export const NotificationTitle = {
@@ -316,7 +317,7 @@ export const SearchType = {
   PROJECTS: 'projects',
   CHATS: 'chats',
   ORGANIZATIONS: 'organizations',
-  APPLICANTS: 'applicants'
+  APPLICANTS: 'applicants',
 };
 
 export const MediaContentType = {
