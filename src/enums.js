@@ -260,6 +260,7 @@ export const NotificationType = {
   DISPUTE_JUROR_SELECTION_COMPLETED_TO_PARTIES:
     'DISPUTE_JUROR_SELECTION_COMPLETED_TO_PARTIES',
   DISPUTE_CLOSED_TO_LOSER_PARTY: 'DISPUTE_CLOSED_TO_LOSER_PARTY',
+  REACH_10K_IMPACT_POINT: 'REACH_10K_IMPACT_POINT'
 };
 
 export const NotificationTitle = {
@@ -297,6 +298,7 @@ export const NotificationTitle = {
   DISPUTE_NEW_MESSAGE: 'Dispute new message',
   DISPUTE_NEW_RESPONSE: 'Dispute new response',
   DISPUTE_WITHDRAWN: 'Dispute withdrawn',
+  REACH_10K_IMPACT_POINT: 'Reaching 10K impact points'
 };
 
 export const IdentityType = {
