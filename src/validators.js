@@ -332,3 +332,13 @@ export const DisputeMessagingSchema = Joi.object({
   message: Joi.string().required(),
   evidences: Joi.array().items(Joi.string().uuid()),
 });
+
+export const PreferencesSchema = Joi.object({
+  title: Joi.string()
+    .valid(...Object.values(enums.PreferenceTitle))
+    .required(),
+  value: Joi.string()
+    .valid(...Object.values(enums.PreferenceValue))
+    .required(),
+  description: Joi.string(),
+});
