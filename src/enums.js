@@ -327,6 +327,13 @@ export const SearchType = {
   APPLICANTS: 'applicants',
 };
 
+export const SearchV2Type = {
+  USERS: 'users',
+  PROJECTS: 'projects',
+  ORGANIZATIONS: 'organizations',
+  LOCATIONS: 'locations',
+};
+
 export const MediaContentType = {
   JPEG: 'image/jpeg',
   PNG: 'image/png',

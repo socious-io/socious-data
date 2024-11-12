@@ -208,6 +208,14 @@ export const SearchSchema = Joi.object({
   filter: Joi.object(),
 });
 
+export const SearchV2Schema = Joi.object({
+  q: Joi.string(),
+  type: Joi.string()
+    .valid(...Object.values(enums.SearchV2Type))
+    .required(),
+  filter: Joi.object(),
+});
+
 export const EscrowSchema = Joi.object({
   service: Joi.string()
     .valid(...Object.values(enums.PaymentService))
@@ -340,5 +348,5 @@ export const PreferencesSchema = Joi.object({
   value: Joi.string()
     .valid(...Object.values(enums.PreferenceValue))
     .required(),
-  description: Joi.string(),
+  description: Joi.string().allow(null, ''),
 });
